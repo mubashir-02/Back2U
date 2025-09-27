@@ -10,19 +10,16 @@ const ExpressError = require('./utils/ExpressError.js');
 const {itemSchema , reviewSchema } = require('./schema.js');
 const Review = require("./models/review.js");
 const multer = require('multer');
+const dotenv = require("dotenv");
+dotenv.config();
 
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("✅ MongoDB connected"))
+.catch(err => console.error("❌ Error:", err));
 
-async function main() {
-  try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("✅ MongoDB connected");
-  } catch (err) {
-    console.error("❌ MongoDB connection error:", err);
-  }
-}
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
@@ -147,6 +144,7 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(8080,()=>{
-    console.log("Server is running on port 8080");
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`🚀 Server is running on port ${PORT}`);
 });
