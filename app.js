@@ -15,7 +15,7 @@ const cloudinary = require('./utils/cloudinary.js').v2;
 const dotenv = require("dotenv");
 dotenv.config();
 
-mongoose.connect(process.env.DB_URL)
+mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log('DB Connected'))
   .catch(err => console.log(err));
 
