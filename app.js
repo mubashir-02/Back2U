@@ -11,9 +11,7 @@ const {itemSchema , reviewSchema } = require('./schema.js');
 const Review = require("./models/review.js");
 const multer = require('multer');
 
-// const {storage} = require('./utils/cloudinary.js').v2;
-const { cloudinary, storage } = require('./utils/cloudinary.js');
-
+const cloudinary = require('./utils/cloudinary.js').v2;
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -33,14 +31,14 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure storage
-// const { storage } = require('./utils/cloudinary'); // import storage from cloudinary.js
+const { storage } = require('./utils/cloudinary'); // import storage from cloudinary.js
 
 const upload = multer({ storage: storage });
 // Route to handle form submission with image upload
 app.post('/items', upload.single('item[image]'), async (req, res) => {
     const newItem = new item(req.body.item);
     if (req.file) {
-        newItem.image = req.file.path; // save path to DB
+        newItem.image = req.file.filename; // save path to DB
     }
     await newItem.save();
     res.redirect('/items');
