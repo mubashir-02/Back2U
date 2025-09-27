@@ -11,7 +11,9 @@ const {itemSchema , reviewSchema } = require('./schema.js');
 const Review = require("./models/review.js");
 const multer = require('multer');
 
-const {storage} = require('./utils/cloudinary.js').v2;
+// const {storage} = require('./utils/cloudinary.js').v2;
+const { cloudinary, storage } = require('./utils/cloudinary.js');
+
 const dotenv = require("dotenv");
 dotenv.config();
 
