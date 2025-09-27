@@ -1,0 +1,47 @@
+<% layout("layouts/boilerplate") %>
+
+    <body>
+        <div class="row mt-3 ">
+            <div class="col-8 offset-2">
+                <h3>Edit your listing:</h3>
+                <form method="POST" action="/items/<%= fnditem._id %>/?_method=PUT" novalidate
+                    class="needs-validation">
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold">Name :</label>
+                        <input type="text" name="item[name]" value="<%= fnditem.name %>" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Enter Name</div>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="number" class="form-label fw-bold">Conatct Number :</label>
+                        <input type="text" name="item[number]" value="<%= fnditem.number %>"  class="form-control" required>
+                        <div class="invalid-feedback">Enter contact number</div>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-bold">Title :</label>
+                        <input type="text" name="item[title]" value="<%= fnditem.title %>"
+                            class="form-control" required>
+                        <div class="invalid-feedback">Enter Item Name</div>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label fw-bold">Description :</label>
+                        <textarea name="item[description]"   placeholder="enter description"
+                            class="form-control" required><%= fnditem.description %></textarea>
+                        <div class="invalid-feedback">Enter a short description</div>   
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-bold ">Image URL :</label>
+                        <input type="text" name="item[image]" value="<%= fnditem.image%>"
+                            class="form-control" >
+                    </div>
+                    
+                    <button class="btn btn-dark edit-btn mt-3">Edit</button><br><br>
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+    </body>

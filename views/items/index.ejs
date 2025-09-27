@@ -1,0 +1,44 @@
+<% layout("layouts/boilerplate") %>
+
+    <body>
+        <h2 class="  text-center fw-bold mt-2 mb-3">Missing Items</h2>
+        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mb-2">
+            <% for(let item of allItems) { %>
+                <div class="mb-4">
+                    <a href="/items/<%= item._id%>" style=" text-decoration: none;">
+                        <div class="card h-100 listing-card  ">
+                            <img src="<%= item.image %>" class="card-img-top img " alt="Listing image"
+                                style="height: 20rem;">
+                            <div class="card-img-overlay"></div>
+                            <div class="card-body mt-2 ms-3 mb-2">
+                                <p class="card-text">
+                                    <b class="fs-4" style="font-weight: 600;">
+                                        <%= item.title %>
+                                    </b><br>
+
+                                <p class="text-muted" style="font-size: 1rem; ">
+                                    <%= item.description %>
+                                </p>
+                                </p>
+
+
+                            </div>
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <% } %>
+
+        </div>
+
+
+
+
+
+
+
+
+    </body>

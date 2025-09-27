@@ -1,0 +1,76 @@
+<% layout("layouts/boilerplate") %>
+
+    <body>
+        <div class="row mt-2">
+            <div class="col-7 offset-2 ">
+                <h3>
+                    <%= fnditem.title %>
+                </h3>
+            </div>
+        </div>
+        <div class="card border-info col-9 offset-2 show-card listing-card  ">
+            <div class="col d-flex">
+                <img src="<%=fnditem.image%>" class="card-img-top show-img" alt="Listing-image" style="height: 35rem;">
+            <div class="card-body ">
+                <p class="card-text text-dark mt-2 ms-2 mb-3">
+
+
+                    <b>Description:</b> <br>
+                    <%= fnditem.description %> <br><br>
+                        <b>Name:</b> <br>
+                        <%= fnditem.name %> <br><br>
+                            <b>Contact Number:</b> <br>
+                            <%= fnditem.number %> 
+
+                </p>
+            </div> </div>
+            
+        </div>
+         <br> 
+         <div class="btns mb-3">
+
+            <a href="/items/<%= fnditem._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a> `
+
+            <form method="POST" action="/items/<%= fnditem._id %>/?_method=DELETE">
+                <button class="btn btn-dark  offset-5">Delete</button>
+            </form>
+
+        </div> 
+        <br>
+        <hr>
+        <div class="col-7 offset-2">
+            <h3>Leave a comment:</h3>
+            <form action="/items/<%= fnditem._id %>/reviews" method="POST" nonvalidate class="needs-validation">
+                <div class="mb-3 ">
+                    <label for="comment" class="form-label"></label>
+                    <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control"
+                        required></textarea>
+                    <div class="invalid-feedback">Please enter your comment</div>
+                </div>
+                <button class="btn btn-outline-dark">Sumbit</button>
+            </form>
+            <hr>
+            <h4 class="comm mb-3 ">COMMENTS:</h4>
+            <div class="row mb-3">
+                <% for(let com of fnditem.comments) { %>
+                    <div class="card border border-info col-5 ms-3 mb-3 ">
+                        <div class="card-body ">
+                            <p class="card-text text-dark mt-3 ms-2 mb-3">
+                                <%= com.comment %>
+                            </p>
+                            <!-- <form  class="mb-3" action="/items/<%= fnditem._id %>/reviews/<%= com._id %>?_method=DELETE"
+                                method="POST">
+                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            </form> -->
+                        </div>
+                    </div>
+                    <% } %>
+
+            </div>
+
+
+
+
+        </div>
+
+    </body>

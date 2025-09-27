@@ -1,0 +1,74 @@
+<% layout("layouts/boilerplate") %>
+
+    <body>
+        <div class="row mt-3 mb-4">
+            <div class="col-8 offset-2">
+                <h3>Add the details of an Item:</h3>
+                <form method="POST" action="/items" enctype="multipart/form-data" novalidate class="needs-validation">
+                    <div class="mb-3">
+                        <label for="name" class="form-label fw-bold">Name :</label>
+                        <input type="text" name="item[name]" placeholder="Enter your name" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Enter name</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="number" class="form-label fw-bold">Contact Number :</label>
+                        <input type="text" name="item[number]" placeholder="Enter your contact number"
+                            class="form-control" required>
+                        <div class="invalid-feedback">Enter Contact Number</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label fw-bold">Item Name :</label>
+                        <input type="text" name="item[title]" placeholder="Enter item name" class="form-control"
+                            required>
+                        <div class="invalid-feedback">Enter item name</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label fw-bold">Description :</label>
+                        <textarea name="item[description]" placeholder="Give a short description about your Item"
+                            class="form-control " rows="5" required></textarea>
+                        <div class="invalid-feedback">Enter a short description</div>
+                    </div>
+
+                    <div class="">
+                        <label for="image" class="form-label fw-bold">Image:</label>
+                        <div class="d-flex">
+                            <input type="text" id="imageInput" placeholder="Select an image from your computer"
+                                class="form-control me-2" readonly>
+                            <button type="button" class="btn btn-primary" id="openGalleryBtn">Go to Gallery</button>
+                        </div>
+                        <img id="preview" src="" 
+                            style="max-width:200px; display:block; margin-top:10px;">
+                        <input type="file" id="filePicker" name="item[image]" accept="image/*" style="display:none;">
+                    </div>
+
+                    <script>
+                        const openBtn = document.getElementById('openGalleryBtn');
+                        const filePicker = document.getElementById('filePicker');
+                        const imageInput = document.getElementById('imageInput');
+                        const preview = document.getElementById('preview');
+
+                        openBtn.addEventListener('click', () => {
+                            filePicker.click(); // Opens file picker
+                        });
+
+                        filePicker.addEventListener('change', (event) => {
+                            const file = event.target.files[0];
+                            if (file) {
+                                imageInput.value = file.name; // Shows selected file name
+                                preview.src = URL.createObjectURL(file); // Preview image
+                            }
+                        });
+                    </script>
+
+                    <br>
+                    <button class="btn btn-dark add-btn col-2 ">Add</button>
+                </form>
+            </div>
+
+        </div>
+
+
+
+    </body>

@@ -1,0 +1,172 @@
+body {
+    font-family: "Lora", sans-serif !important;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-color: #faf8e7 !important; */
+    background-color: rgb(211, 210, 210) !important;
+}
+
+.container {
+    flex: 1;
+}
+
+.navbar {
+    height: 5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    background-color: #233d4d !important;
+
+}
+
+.fa-compass {
+    border-radius: 50% !important;
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.nav-link {
+    color: #f7f7f7 !important;
+}
+.nav2 {
+    background-color: #233d4d !important;
+}
+.nav-text {
+    font-weight: 500;
+    font-size: 1.3rem;
+    
+}
+
+/* footer  */
+
+.f-info-links a {
+    text-decoration: none;
+    color: #fcf9f9;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links,
+.f-info-socials {
+    width: 100%;
+}
+.name {
+    color: #fcf9f9;
+    font-size: 1.2rem;
+    
+}
+
+.f-info-socials i {
+    margin-top: 1rem;
+    color: #fcf9f9;
+    
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.info {
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1f3148 !important;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* cards  */
+.listing-card {
+    border: none !important;
+    /* border: 2px solid black !important;  */
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    border-radius: 13px !important;
+
+}
+
+.card-img-top {
+    /* padding: 7px !important; */
+    border-radius: 8px !important;
+    
+
+
+    width: 100% !important;
+    object-fit: fill !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 400 !important;
+    color: #222222 !important;
+    text-decoration: none !important;
+}
+
+/* card effects  */
+.card-img-overlay {
+    opacity: 0;
+    
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+    
+}
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+
+}
+
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+
+}
+
+/* show page  */
+
+.btns {
+    display: flex;
+
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+img {
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.008);
+}
+
+
+h2 {
+    color: rgb(208, 11, 11) !important;
+    text-decoration: rgb(0, 0, 0) underline !important;
+}
+
+h3 {
+    color: rgb(0, 0, 0) !important;
+    text-decoration: rgb(12, 215, 230) underline !important;
+}
+
+.comm {
+    text-decoration: rgb(12, 215, 230) underline !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+
+
+
+
