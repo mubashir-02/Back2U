@@ -11,7 +11,7 @@ const {itemSchema , reviewSchema } = require('./schema.js');
 const Review = require("./models/review.js");
 const multer = require('multer');
 
-const cloudinary = require('./utils/cloudinary.js').v2;
+const {storage} = require('./utils/cloudinary.js').v2;
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -38,7 +38,7 @@ const upload = multer({ storage: storage });
 app.post('/items', upload.single('item[image]'), async (req, res) => {
     const newItem = new item(req.body.item);
     if (req.file) {
-        newItem.image = req.file.filename; // save path to DB
+        newItem.image = req.file.path; // save path to DB
     }
     await newItem.save();
     res.redirect('/items');
