@@ -12,14 +12,16 @@ const Review = require("./models/review.js");
 const multer = require('multer');
 
 
-main()
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.log(err));
-
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/items');
-
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("✅ MongoDB connected");
+  } catch (err) {
+    console.error("❌ MongoDB connection error:", err);
+  }
 }
 
 app.engine('ejs', ejsMate);
