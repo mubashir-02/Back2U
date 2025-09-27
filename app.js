@@ -31,7 +31,7 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure storage
-const { storage } = require('./utils/cloudinary'); // import storage from cloudinary.js
+// const { storage } = require('./utils/cloudinary'); // import storage from cloudinary.js
 
 const upload = multer({ storage: storage });
 // Route to handle form submission with image upload
