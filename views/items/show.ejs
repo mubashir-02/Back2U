@@ -43,7 +43,7 @@
             <form action="/items/<%= fnditem._id %>/reviews" method="POST" nonvalidate class="needs-validation ">
                 <div class="mb-3 ">
                     <label for="comment" class="form-label"></label>
-                    <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control comm1"
+                    <textarea name="review[comment]" id="comment" cols="30" rows="6" class="form-control comm1" style="width: 53rem;"
                         required></textarea>
                     <div class="invalid-feedback">Please enter your comment</div>
                 </div>
@@ -53,8 +53,8 @@
             <h4 class="comm mb-3 comm2">COMMENTS:</h4>
             <div class="row mb-3 comms">
                 <% for(let com of fnditem.comments) { %>
-                    <div class="card border border-info col-lg-5 ms-3 mb-3 comm3 ">
-                        <div class="card-body ">
+                    <div class="card border border-info col-lg-4 ms-3 mb-3 comm3" style="width: 23rem;">
+                        <div class="card-body">
                             <p class="card-text text-dark mt-3 ms-2 mb-3">
                                 <%= com.comment %>
                             </p>
