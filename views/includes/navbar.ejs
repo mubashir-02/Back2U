@@ -1,7 +1,8 @@
 <nav class="navbar mb-3 navbar-expand-md navbar-light  border-bottom sticky-top nav1">
   <div class="container-fluid nav2">
     <!-- <a class="navbar-brand" href="/"><i class="fa-solid fa-compass"></i></a> -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNF5LYFfMZ4ttGsBmZ6Y7eeV3lcvMB3NBV3w&s" class="fa-compass me-2" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNF5LYFfMZ4ttGsBmZ6Y7eeV3lcvMB3NBV3w&s"
+      class="fa-compass me-2" alt="">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,11 +20,14 @@
         </li>
       </ul>
 
-    </div>
-    <form class="d-flex" role="search" action="/items/title" method="GET">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="title">
-      <button class="btn btn-outline-primary" type="submit">Search</button>
-    </form>
+      <div class="search">
+        <form class="d-flex" role="search" action="/items/title" method="GET">
+          <input class="form-control  col-lg-8 me-2" type="search" placeholder="Search" aria-label="Search" name="title">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
 
-  </div>
+      </div>
+
+
+    </div>
 </nav>

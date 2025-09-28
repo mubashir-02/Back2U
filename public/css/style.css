@@ -29,12 +29,39 @@ body {
     color: #f7f7f7 !important;
 }
 .nav2 {
+    
     background-color: #233d4d !important;
+}
+
+.nav3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-text {
     font-weight: 500;
     font-size: 1.3rem;
     
+}
+.search {
+    position: absolute;
+    left: 70rem;
+}
+
+    /* background-color: aqua;
+    color: #fe424d; */
+
+
+@media (max-width: 480px) {
+    .search {
+        position: absolute;
+        left: 13rem;
+        top: 9.4rem;
+        background-color: #233d4d !important;
+        padding: 0.5rem;
+        border-radius: 8px;
+
+    }
 }
 
 /* footer  */
