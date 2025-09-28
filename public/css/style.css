@@ -62,6 +62,10 @@ body {
         border-radius: 8px;
 
     }
+    .flexi {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 /* footer  */
