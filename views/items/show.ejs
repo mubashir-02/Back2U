@@ -3,16 +3,16 @@
     <body>
         <div class="row mt-2">
             <div class="col-7 offset-2 ">
-                <h3>
+                <h3 id="title">
                     <%= fnditem.title %>
                 </h3>
             </div>
         </div>
-        <div class="card border-info col-8 offset-2 show-card listing-card  ">
+        <div class="card border-info col-lg-8 offset-2 show-card listing-card ">
             <div class="col d-flex flexi">
-                <img src="<%=fnditem.image%>" class="card-img-top show-img" alt="Listing-image" style="height: 35rem;">
+                <img src="<%=fnditem.image%>" class="card-img-top show-img" alt="Listing-image" style="height: 34rem;">
             <div class="card-body ">
-                <p class="card-text text-dark mt-2 ms-2 mb-3">
+                <p class="card-text text-dark mt-2 ms-2 mb-3 me-2">
 
 
                     <b>Description:</b> <br>
@@ -39,21 +39,21 @@
         <br>
         <hr>
         <div class="col-7 offset-2">
-            <h3>Leave a comment:</h3>
-            <form action="/items/<%= fnditem._id %>/reviews" method="POST" nonvalidate class="needs-validation">
+            <h3 id="title">Leave a comment:</h3>
+            <form action="/items/<%= fnditem._id %>/reviews" method="POST" nonvalidate class="needs-validation ">
                 <div class="mb-3 ">
                     <label for="comment" class="form-label"></label>
-                    <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control"
+                    <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control comm1"
                         required></textarea>
                     <div class="invalid-feedback">Please enter your comment</div>
                 </div>
-                <button class="btn btn-outline-dark">Sumbit</button>
+                <button class="btn btn-outline-dark btn2">Sumbit</button>
             </form>
             <hr>
-            <h4 class="comm mb-3 ">COMMENTS:</h4>
-            <div class="row mb-3">
+            <h4 class="comm mb-3 comm2">COMMENTS:</h4>
+            <div class="row mb-3 comms">
                 <% for(let com of fnditem.comments) { %>
-                    <div class="card border border-info col-5 ms-3 mb-3 ">
+                    <div class="card border border-info col-lg-5 ms-3 mb-3 comm3 ">
                         <div class="card-body ">
                             <p class="card-text text-dark mt-3 ms-2 mb-3">
                                 <%= com.comment %>

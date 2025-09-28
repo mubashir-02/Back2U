@@ -28,8 +28,9 @@ body {
 .nav-link {
     color: #f7f7f7 !important;
 }
+
 .nav2 {
-    
+
     background-color: #233d4d !important;
 }
 
@@ -38,22 +39,26 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .nav-text {
     font-weight: 500;
     font-size: 1.3rem;
-    
+
 }
+
 .search {
     position: absolute;
     left: 70rem;
 }
 
 .lines {
+
     background-color: #f8f8f8 !important;
+
 
 }
 
-    /* background-color: aqua;
+/* background-color: aqua;
     color: #fe424d; */
 
 
@@ -67,10 +72,45 @@ body {
         border-radius: 8px;
 
     }
+
     .flexi {
         display: flex;
         flex-wrap: wrap;
+        height: 20rem !important;
+
     }
+
+    .show-card,
+    .comm1,
+    #title,
+    .comm2 {
+        position: relative;
+        right: 2.2rem;
+        /* height: 37rem !important; */
+        width: 20rem !important;
+    }
+
+    .btn2 {
+        position: relative;
+        right: 2.2rem;
+    }
+
+    .comms {
+        position: relative;
+        right: 1.8rem;
+        width: 20rem;
+
+    }
+
+    .comm3 {
+        position: relative;
+        right: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        /* width: 20rem; */
+    }
+
+
 }
 
 /* footer  */
@@ -88,16 +128,17 @@ body {
 .f-info-socials {
     width: 100%;
 }
+
 .name {
     color: #fcf9f9;
     font-size: 1.2rem;
-    
+
 }
 
 .f-info-socials i {
     margin-top: 1rem;
     color: #fcf9f9;
-    
+
     font-size: 1.2rem;
     margin-right: 1rem;
 }
@@ -125,7 +166,7 @@ body {
 .card-img-top {
     /* padding: 7px !important; */
     border-radius: 8px !important;
-    
+
 
 
     width: 100% !important;
@@ -145,13 +186,13 @@ body {
 /* card effects  */
 .card-img-overlay {
     opacity: 0;
-    
+
 }
 
 .card-img-overlay:hover {
     opacity: 0.2;
     background-color: white;
-    
+
 }
 
 .add-btn {
@@ -173,17 +214,18 @@ body {
 
 }
 
-.show-card{
+.show-card {
     padding-left: 0;
     padding-right: 0;
 }
 
 
 img {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
+
 img:hover {
-  transform: scale(1.008);
+    transform: scale(1.008);
 }
 
 
@@ -201,8 +243,3 @@ h3 {
     text-decoration: rgb(12, 215, 230) underline !important;
     color: rgb(0, 0, 0) !important;
 }
-
-
-
-
-
