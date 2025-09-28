@@ -13,6 +13,7 @@ body {
 }
 
 .navbar {
+    width: 100%;
     height: 5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
     background-color: #233d4d !important;
@@ -231,15 +232,16 @@ img:hover {
 
 h2 {
     color: rgb(208, 11, 11) !important;
-    text-decoration: rgb(0, 0, 0) underline !important;
+    /* text-decoration: rgb(0, 0, 0) underline !important; */
+
 }
 
 h3 {
     color: rgb(0, 0, 0) !important;
-    text-decoration: rgb(12, 215, 230) underline !important;
+    /* text-decoration: rgb(12, 215, 230) underline !important; */
 }
 
 .comm {
-    text-decoration: rgb(12, 215, 230) underline !important;
+    /* text-decoration: rgb(12, 215, 230) underline !important; */
     color: rgb(0, 0, 0) !important;
 }
