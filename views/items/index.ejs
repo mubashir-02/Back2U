@@ -2,15 +2,15 @@
 
     <body>
         <h2 class="  text-center fw-bold mt-2 mb-3">Missing Items</h2>
-        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mb-2">
+        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1 mb-2">
             <% for(let item of allItems) { %>
                 <div class="mb-4">
                     <a href="/items/<%= item._id%>" style=" text-decoration: none;">
-                        <div class="card h-100 listing-card  ">
+                        <div class="card h-100 listing-card" style="width: 19.7rem;">
                             <img src="<%= item.image %>" class="card-img-top img " alt="Listing image"
-                                style="height: 20rem;">
+                                style="height: 15rem;">
                             <div class="card-img-overlay"></div>
-                            <div class="card-body mt-2 ms-3 mb-2">
+                            <div class="card-body mt-2 ms-3 ">
                                 <p class="card-text">
                                     <b class="fs-4" style="font-weight: 600;">
                                         <%= item.title %>

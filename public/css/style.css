@@ -81,7 +81,10 @@ body {
 
     }
 
-    .show-card,
+    .show-card {
+    
+
+    }
     .comm1,
     #title,
     .comm2 {
@@ -109,6 +112,10 @@ body {
         display: flex;
         flex-wrap: wrap;
         /* width: 20rem; */
+    }
+    .listing-card {
+        margin: auto !important;
+        /* width: 25rem !important; */
     }
 
 
@@ -160,13 +167,13 @@ body {
     /* border: 2px solid black !important;  */
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.6), 0 2px 4px -2px rgb(0 0 0 / 0.6);
-    border-radius: 6px !important;
+    border-radius: 5px !important;
 
 }
 
 .card-img-top {
     /* padding: 7px !important; */
-    border-radius: 5px !important;
+    border-radius: 10px !important;
 
 
 
@@ -188,6 +195,11 @@ body {
 .card-img-overlay {
     opacity: 0;
 
+}
+
+.img {
+    /* padding: 40px; */
+    /* border-radius: 6px !important; */
 }
 
 .card-img-overlay:hover {
