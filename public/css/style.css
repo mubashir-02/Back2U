@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     /* background-color: #faf8e7 !important; */
-    background-color: rgb(211, 210, 210) !important;
+    background-color: rgb(236, 234, 234) !important;
 }
 
 .container {
@@ -159,14 +159,14 @@ body {
     border: none !important;
     /* border: 2px solid black !important;  */
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
-    border-radius: 13px !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.6), 0 2px 4px -2px rgb(0 0 0 / 0.6);
+    border-radius: 6px !important;
 
 }
 
 .card-img-top {
     /* padding: 7px !important; */
-    border-radius: 8px !important;
+    border-radius: 5px !important;
 
 
 
